@@ -3,8 +3,10 @@
 
 esp32:
   board: adafruit_feather_esp32s3_nopsram
+#  framework:
+#    type: arduino
   framework:
-    type: arduino
+    type: esp-idf
 
 # Modbus uart
 uart:
