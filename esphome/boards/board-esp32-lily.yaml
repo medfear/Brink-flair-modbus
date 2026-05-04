@@ -2,7 +2,7 @@
 ### The modbus TTL to RS485 interface used is a XY-017  (RS3485). No flow control needed and 3.3V powersupply
 
 esp32:
-  board: adafruit_feather_esp32s3_nopsram
+  board: esp32dev
 #  framework:
 #    type: arduino
   framework:
@@ -13,22 +13,22 @@ uart:
   id: mod_bus
   baud_rate: 19200
   stop_bits: 1
-  tx_pin: 16
-  rx_pin: 12
+  tx_pin: GPIO33
+  rx_pin: GPIO32
   parity: even
 
 # Option for 2x I2C connectors  ***experimental***
 # Comment with # if not used.
-i2c:  
-  - id: bus_a
-    sda: 13
-    scl: 14
-    scan: true
+#i2c:  
+#  - id: bus_a
+#    sda: 13
+#    scl: 14
+#    scan: true
 
-  - id: bus_b
-    sda: 10
-    scl: 18
-    scan: true
+#  - id: bus_b
+#    sda: 10
+#    scl: 18
+#    scan: true
 
 ## Option for DHT11 or DHT22 on last 3 terminals -/Signal/+ ***experimental***
 ## Comment with # if not used.
@@ -46,16 +46,16 @@ sensor:
 
 ## Option for Relay  ***experimental***
 ## Comment with # if not used.
-switch:
+#switch:
   ## Relay
-  - platform: gpio
-    pin:
-      number: 5
-      inverted: false
-    name: ${brink_relay}"
-    id: brink_relay
+#  - platform: gpio
+#    pin:
+#      number: 5
+#      inverted: false
+#    name: ${brink_relay}"
+#    id: brink_relay
 #    internal: true
-    icon: mdi:alarm-bell
+#    icon: mdi:alarm-bell
 
 ###  ESP restart button
 button:
@@ -66,9 +66,9 @@ button:
 # Enable/Disable logging
 logger:
   logs:
-#    modbus_controller.sensor: WARN
-#    modbus_controller.output: WARN
-#    modbus.number: WARN
+    modbus_controller.sensor: WARN
+    modbus_controller.output: WARN
+    modbus.number: WARN
     esp32.preferences: WARN
     sensor: WARN
     text_sensor: WARN
