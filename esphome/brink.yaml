@@ -15,7 +15,7 @@ substitutions:
 
 packages:
   remote_package:
-    url: https://github.com/fonske/Brink-flair-modbus
+    url: https://github.com/medfear/Brink-flair-modbus
     ref: main
     refresh: 0s
     files: [ esphome/type/brink-325.yaml,
