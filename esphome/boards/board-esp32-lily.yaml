@@ -8,6 +8,12 @@ esp32:
   framework:
     type: esp-idf
 
+
+rs485:
+  de_pin: 9
+  re_pin: 9
+  disable_when_idle: true
+
 # Modbus uart
 uart:
   id: mod_bus
@@ -17,10 +23,6 @@ uart:
   rx_pin: 21
   parity: even
 
- rs485:
-  de_pin: 9
-  re_pin: 9
-  disable_when_idle: true
 
 # Option for 2x I2C connectors  ***experimental***
 # Comment with # if not used.
