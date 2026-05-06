@@ -15,6 +15,7 @@ uart:
   stop_bits: 1
   tx_pin: 22
   rx_pin: 21
+  de_pin: 9
   parity: even
 
 # Option for 2x I2C connectors  ***experimental***
