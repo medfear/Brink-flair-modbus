@@ -16,10 +16,7 @@ uart:
   tx_pin: 22
   rx_pin: 21
   parity: even
-  rs485:
-    de_pin: 9
-    re_pin: 9
-    disable_when_idle: true
+  flow_control_pin: 9
 
 # Option for 2x I2C connectors  ***experimental***
 # Comment with # if not used.
